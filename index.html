@@ -5,37 +5,151 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfólio  |  Felipe B. De Almeida</title>
     </head>
-    <body>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #E2E2E2;
+            box-sizing: border-box;
+        }
 
-        <ol>
-            <a href="#foto"><li>Foto</li></a>
-            <a href="#nome"><li >Nome</li></a>
-            <a href="#descricao"><li>Descricao</li></a>
-            <a href="#habilidades"><li>Habilidades</li></a>
-            <a href="#link"><li >Link</li></a>
-        </ol>
-
-        <br><br><br><br><br><br><br><br><br><br>
-        <img id="foto" src="./img/profile.jpeg" alt="Foto de perfil" width="200">
-        <h2 id="nome">Felipe Brigagão de Almeida</h2>
-        <h4 id="descricao">
-            Ceilândia - Distrito Federal
-            <br>
-            Estudante da <strong>Trybe</strong>
-            <br>
-            Cursando Bacharelado de Ciência da Computação na <strong>Universidade Católica de Brasília</strong>
-        </h4>
-        <br><br><br><br><br><br><br><br><br><br>
-
-        <ol id="habilidades">
-            <li><em>Resiliência</em></li>
-            <li><em>Boa Comunicação</em></li>
-            <li><em>Trabalho em Equipe</em></li>
-            <li><em>Empatia</em></li>
-        </ol>
-        <br><br><br><br><br><br><br><br><br><br>
+        section
+        {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(327deg, #000000, #123f52, #185d7b, #0b6a92);
+            background-size: 400% 400%;
+            position: relative;
+            animation: change 10s ease-in-out infinite;
+        }
         
-        <a id="link" href="https://adrenaline.com.br/" target="_blank">Link para o Adrenaline</a>
+        .menu-portfolio ul
+        {
+            list-style-type: none;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0);
+        }
 
+        .menu-portfolio li
+        {
+            float: left;
+        }
+
+        .menu-portfolio li > a
+        {
+            display: inline-block;
+            font-weight: 700;
+            text-align: center;
+            padding: 20px 22px;
+            text-decoration: none;
+        }
+
+        .menu-portfolio li > a:hover
+        {
+            background-color: #E2E2E2;
+            color: #17526b;
+        }
+
+        .box-portfolio
+        {
+            border: 3px solid #E2E2E2;
+            padding: 2rem 5rem;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+
+        #nome
+        {
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 35px;
+        }
+
+        .descricao
+        {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 100px;
+        }
+
+        #habilidades
+        {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 100px;
+        }
+
+        .link
+        {
+            font-weight: 700;
+            text-align: center;
+            margin: auto;
+        }
+
+        .link > a:hover
+        {
+            background: #E2E2E2;
+            padding: 22px 80px;
+            color: #17526b;
+        }
+
+        .link a:hover
+        {
+            
+        }
+
+        @keyframes change 
+        {
+            0% 
+            {
+                background-position: 0% 50%;
+            }
+
+            50% 
+            {
+                background-position: 100% 50%;
+            }
+
+            100% 
+            {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+    <body>
+        <section>
+            <div class="menu-portfolio">
+                <ul>
+                    <li><a href="#foto">Foto</a></li>
+                    <li><a href="#nome">Nome</a></li>
+                    <li><a href="#descricao">Descricao</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#link">Link</a></li>
+                </ul>
+            </div>
+        
+            <div class="box-portfolio">
+                <img id="foto" src="./img/profile.jpeg" alt="Foto de perfil" width="200">
+                <h2 id="nome">Felipe Brigagão de Almeida</h2>
+                <h4 class="descricao" id="descricao">
+                    Ceilândia - Distrito Federal<br>
+                    Estudante na <strong>Trybe</strong><br>
+                    Cursando Bacharelado de Ciência da Computação na <strong>Universidade Católica de Brasília</strong>
+                </h4>
+            
+                <ol style="list-style: square;" id="habilidades">
+                    <li><em>Resiliência</em></li>
+                    <li><em>Boa Comunicação</em></li>
+                    <li><em>Trabalho em Equipe</em></li>
+                    <li><em>Empatia</em></li>
+                </ol>
+            
+                <p class="link"><a href="https://adrenaline.com.br/" target="_blank">Adrenaline</a></p>
+            </div>
+        </section>
     </body>
 </html>
